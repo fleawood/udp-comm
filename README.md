@@ -17,8 +17,11 @@ python3 server.py
 On where you want to send messages, run
 
 ```zsh
-python3 client.py
+# Suppose server address is 1.2.3.4
+python3 client.py --host 1.2.3.4
 ```
+
+Default listening port is 7777, you can change it to whatever you like. Do not forget to change it in both server and client.
 
 Make sure server is running before sending messages from client, or nothing will happen.
 
@@ -38,4 +41,5 @@ Maybe add other action in the future.
 
 ## Notice
 
-If you want to run `server.py`, you also need `executor.py`, and if you want to run `client.py`, you also need `actions.py`.
+- Server part need `server.py` and `executor.py`
+- Client part need `client.py` and `actions.py`
