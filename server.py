@@ -20,7 +20,7 @@ class Server(object):
         data, addr = self.s.recvfrom(self.BUF_SIZE)
         host, port = socket.getnameinfo(addr, socket.NI_NUMERICHOST)
 
-        data = json.loads(data)
+        data = json.loads(data.decode())
 
         self.executor.process_data(data, host)
 
